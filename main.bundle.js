@@ -315,7 +315,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "h1, h2, h3 {\n  margin-left: 20px;\n  font-family: 'Roboto',sans-serif;\n}\n\nh1 {\n  font-weight: 900;\n  font-size: 3.5rem;\n\n}\n\n.logo {\n  margin-bottom: -5px;\n  position: relative;\n  -ms-flex-line-pack: center;\n      align-content: center;\n}\n\n.logo:hover {\n  -webkit-filter: drop-shadow(0 0 100000px white);\n          filter: drop-shadow(0 0 100000px white);\n}\n", ""]);
+exports.push([module.i, "h1, h2, h3 {\n  margin-left: 20px;\n  font-family: 'Roboto',sans-serif;\n}\n\nh1 {\n  font-weight: 900;\n  font-size: 3.5rem;\n\n}\n\nh3 {\n  margin-left: 45px;\n  font-size: 1.6rem;\n}\n\n.logo {\n  margin-bottom: -5px;\n  position: relative;\n  -ms-flex-line-pack: center;\n      align-content: center;\n}\n\n.logo:hover {\n  -webkit-filter: drop-shadow(0 0 100000px white);\n          filter: drop-shadow(0 0 100000px white);\n}\n", ""]);
 
 // exports
 
@@ -328,7 +328,7 @@ module.exports = module.exports.toString();
 /***/ "./src/app/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<header class=\"content-header\">\n    <nav class=\"navbar navbar-static-top\">\n      <div class=\"container\">\n        <h1 [routerLink]=\"['/']\"><img class=\"logo\" src=\"https://ipfs.io/ipfs/QmafjVWnjwNC1nzimohyRuPeZQ9Yk34SXawVJp3vrn6Vie\" height=\"50\" width=\"50\"> SnapCloud </h1>\n        <h3 style=\"color: #0099cc\">\n              SnapCloud enables users to quickly and easily transfer large files of any format.\n        </h3>\n      </div>\n    </nav>\n </header>\n"
+module.exports = "\n<header class=\"content-header\">\n    <nav class=\"navbar navbar-static-top\">\n      <div class=\"container\">\n        <h1 [routerLink]=\"['/']\"><img class=\"logo\" src=\"https://ipfs.io/ipfs/QmafjVWnjwNC1nzimohyRuPeZQ9Yk34SXawVJp3vrn6Vie\" height=\"50\" width=\"50\"> SnapCloud </h1>\n        <h3 style=\"color: #0099cc\">\n          The WeTransfer Alternative.\n        </h3>\n      </div>\n    </nav>\n </header>\n"
 
 /***/ }),
 
