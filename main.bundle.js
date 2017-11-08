@@ -328,7 +328,7 @@ module.exports = module.exports.toString();
 /***/ "./src/app/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<header class=\"content-header\">\n    <nav class=\"navbar navbar-static-top\">\n      <div class=\"container\">\n        <h1 [routerLink]=\"['/']\"><img class=\"logo\" src=\"https://ipfs.io/ipfs/QmWUnikBm1sADXghU16YxSZKWXKizyf471v2vhzmAiY57a\" height=\"60\" width=\"95\"> SnapCloud</h1>\n        <h3 style=\"color: #0099cc\">\n              The WeTranser Alternative.\n        </h3>\n      </div>\n    </nav>\n </header>\n\n"
+module.exports = "\n<header class=\"content-header\">\n    <nav class=\"navbar navbar-static-top\">\n      <div class=\"container\">\n        <h1 [routerLink]=\"['/']\"><img class=\"logo\" src=\"https://ipfs.io/ipfs/QmWUnikBm1sADXghU16YxSZKWXKizyf471v2vhzmAiY57a\" height=\"60\" width=\"95\"> SnapCloud</h1>\n        <h3 style=\"color: #0099cc\">\n              The WeTransfer Alternative.\n        </h3>\n      </div>\n    </nav>\n </header>\n"
 
 /***/ }),
 
