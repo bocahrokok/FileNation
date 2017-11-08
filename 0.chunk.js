@@ -8,7 +8,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".container {\n  background-color: white;\n  height: 350px;\n  width: 350px;\n  padding: 50px;\n  margin-left: 30%;\n  margin-top: 30%;\n  border-radius: 25px;\n}\n\na {\n  color: black;\n\n}\n\n.logo {\n  text-decoration: underline;\n}\n\n.logo:hover {\n  -webkit-filter: drop-shadow(0 0 10px white);\n          filter: drop-shadow(0 0 10px white);\n}\n\n#img-circle {\n    border-radius: 50%;\n    height: 200px;\n    width: 200px;\n    border-style: solid;\n    border-width: 3px;\n    border-color: #8658c9;\n}\n", ""]);
+exports.push([module.i, ".container {\n  background-color: white;\n  height: 350px;\n  width: 350px;\n  padding: 50px;\n  margin-left: 7%;\n  margin-top: 30%;\n  border-radius: 25px;\n}\n\na {\n  color: black;\n\n}\n\n.logo {\n  text-decoration: underline;\n}\n\n.logo:hover {\n  -webkit-filter: drop-shadow(0 0 10px white);\n          filter: drop-shadow(0 0 10px white);\n}\n\n#img-circle {\n    border-radius: 50%;\n    height: 200px;\n    width: 200px;\n    border-style: solid;\n    border-width: 3px;\n    border-color: #8658c9;\n}\n\n@media all and (max-width: 620px) {\n\n.container {\n    width: 250px;\n}\n\n}\n", ""]);
 
 // exports
 
