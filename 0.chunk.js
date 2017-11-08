@@ -8,7 +8,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, ".container {\n  background-color: white;\n  height: 250px;\n  width: 400px;\n  padding: 50px;\n}\n\na {\n  color: black;\n  \n}\n", ""]);
+exports.push([module.i, ".container {\n  background-color: white;\n  height: 350px;\n  width: 350px;\n  padding: 50px;\n  margin-left: 30%;\n  margin-top: 30%;\n  border-radius: 25px;\n}\n\na {\n  color: black;\n\n}\n\n.logo {\n  text-decoration: underline;\n}\n\n.logo:hover {\n  -webkit-filter: drop-shadow(0 0 10px white);\n          filter: drop-shadow(0 0 10px white);\n}\n\n#img-circle {\n    border-radius: 50%;\n    height: 200px;\n    width: 200px;\n    border-style: solid;\n    border-width: 3px;\n    border-color: #8658c9;\n}\n", ""]);
 
 // exports
 
@@ -21,7 +21,7 @@ module.exports = module.exports.toString();
 /***/ "./src/app/about/about.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n<section class=\"content-header\">\n    <h1>About</h1>\n  </section>\n\n  <section class=\"content\">\n      <p class=\"lead\">\n          Decentralized Cloud | The simplest way to send your files around the world using IPFS.\n      </p>\n      <p class=\"lead\">\n        <a href=\"https://github.com/alexsicart/Decentralized-Cloud/blob/gh-pages/LICENSE\">MIT license</a>\n      </p>\n\n\n</section>\n</div>\n"
+module.exports = "<div class=\"container\">\n<section class=\"content-header\">\n  <h1 class=\"logo\" [routerLink]=\"['/']\">SnapCloud</h1>\n  </section>\n\n  <section class=\"content\">\n      <p class=\"lead\">\n          Decentralized Cloud | The simplest way to send your files around the world using IPFS.\n      </p>\n      <a href=\"https://ipfs.io/ipns/QmYwUnoEFYmLsxxj8aYGELK39ut2XYnUhw6vBF5tCMcczu\"><img class=\"u-max-full-width\" id=\"img-circle\" src=\"https://pbs.twimg.com/profile_images/909841669532667908/dAyNzhwX_400x400.jpg\"></a>\n      <p class=\"lead\">\n        <a href=\"https://github.com/alexsicart/Decentralized-Cloud/blob/gh-pages/LICENSE\">MIT license</a>\n      </p>\n\n\n</section>\n</div>\n"
 
 /***/ }),
 
