@@ -786,28 +786,27 @@ var IpfsService = (function () {
                         var myReadableStreamBuffer = new __WEBPACK_IMPORTED_MODULE_5_stream_buffers___default.a.ReadableStreamBuffer({
                             chunkSize: 900000 //determines data transfer rate
                         });
-                        _this.node.files.createAddStream(function (err, stream) {
-                            console.log('ERR', err);
-                            console.log('STREAM', stream);
-                            stream.on('data', function (file) {
-                                console.log('FILE', file);
-                                resolve(file);
-                            });
-                            console.log('WRITE');
-                            myReadableStreamBuffer.on('data', function (chunk) {
-                                _this.progress += chunk.byteLength;
-                                console.log('Progress', _this.progress);
-                                myReadableStreamBuffer.resume();
-                            });
-                            stream.write(myReadableStreamBuffer);
-                            myReadableStreamBuffer.put(__WEBPACK_IMPORTED_MODULE_3_buffer__["Buffer"].from(buffer));
-                            myReadableStreamBuffer.stop();
-                            myReadableStreamBuffer.on('end', function () {
-                                console.log('stream ended.');
-                                stream.end();
-                            });
+                        _this.stream = _this.node.files.addReadableStream();
+                        console.log('ERR', err);
+                        console.log('STREAM', _this.stream);
+                        _this.stream.on('data', function (file) {
+                            console.log('FILE', file);
+                            resolve(file);
+                        });
+                        console.log('WRITE');
+                        myReadableStreamBuffer.on('data', function (chunk) {
+                            _this.progress += chunk.byteLength;
+                            console.log('Progress', _this.progress);
                             myReadableStreamBuffer.resume();
                         });
+                        _this.stream.write(myReadableStreamBuffer);
+                        myReadableStreamBuffer.put(__WEBPACK_IMPORTED_MODULE_3_buffer__["Buffer"].from(buffer));
+                        myReadableStreamBuffer.stop();
+                        myReadableStreamBuffer.on('end', function () {
+                            console.log('stream ended.');
+                            _this.stream.end();
+                        });
+                        myReadableStreamBuffer.resume();
                     });
                 });
             });
@@ -855,7 +854,7 @@ module.exports = module.exports.toString();
 /***/ "./src/app/log-in/log-in.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"this.option == true\">\n<div *ngIf=\"this.option == true\">\n  <br><br>\n  <img class=\"log-img\" src=\"https://source.unsplash.com/user/erondu/\" />\n</div>\n\n\n<div class=\"buttonHolder\" *ngIf=\"this.option == true\" >\n<button (click)=\"buttonClick2()\"> Sign-up</button> <button (click)=\"buttonClick1()\"> Log-in</button>\n<button (click)=\"buttonClick1()\"> Log-in</button> <button (click)=\"buttonClick2()\"> Sign-up</button>\n</div>\n\n<div class=\"loginHolder\" *ngIf=\"this.login == true\" >\n<h2> Log-in to Decentralized Cloud</h2>\n<input type=\"text\" placeholder=\"email\">\n<input type=\"text\" placeholder=\"password\">\n<button class=\"loginButton\" (click)=\"onSignin()\"> Submit </button>\n<p>Don't have an account already? Sign-up <button class=\"transferButton\"(click)=\"buttonClick2()\">here</button>  </p>\n</div>\n\n<div class=\"signupHolder\" *ngIf=\"this.signup == true\">\n<h2> Sign-up to Decentralized Cloud</h2>\n<input type=\"text\" placeholder=\"email\">\n<input type=\"text\" placeholder=\"confirm email\">\n<input type=\"text\" placeholder=\"password\">\n\n<button class=\"signupButton\" (click)=\"onSignup()\"> Submit </button>\n<p>Already have an account? Sign-in <button class=\"transferButton\"(click)=\"buttonClick1()\">here</button></p>\n</div>\n\n<div class=\"loggedinHolder\" *ngIf=\"this.loggedin === true\">\n<app-account></app-account>\n</div>\n</div>\n"
+module.exports = "<div *ngIf=\"this.option == true\">\n<!-- <div *ngIf=\"this.option == true\">\n  <br><br>\n  <img class=\"log-img\" src=\"https://source.unsplash.com/user/erondu/\" />\n</div> -->\n\n\n<div class=\"buttonHolder\" *ngIf=\"this.option == true\" >\n<button (click)=\"buttonClick2()\"> Sign-up</button> <button (click)=\"buttonClick1()\"> Log-in</button>\n<button (click)=\"buttonClick1()\"> Log-in</button> <button (click)=\"buttonClick2()\"> Sign-up</button>\n</div>\n\n<div class=\"loginHolder\" *ngIf=\"this.login == true\" >\n<h2> Log-in to Decentralized Cloud</h2>\n<input type=\"text\" placeholder=\"email\">\n<input type=\"text\" placeholder=\"password\">\n<button class=\"loginButton\" (click)=\"onSignin()\"> Submit </button>\n<p>Don't have an account already? Sign-up <button class=\"transferButton\"(click)=\"buttonClick2()\">here</button>  </p>\n</div>\n\n<div class=\"signupHolder\" *ngIf=\"this.signup == true\">\n<h2> Sign-up to Decentralized Cloud</h2>\n<input type=\"text\" placeholder=\"email\">\n<input type=\"text\" placeholder=\"confirm email\">\n<input type=\"text\" placeholder=\"password\">\n\n<button class=\"signupButton\" (click)=\"onSignup()\"> Submit </button>\n<p>Already have an account? Sign-in <button class=\"transferButton\"(click)=\"buttonClick1()\">here</button></p>\n</div>\n\n<div class=\"loggedinHolder\" *ngIf=\"this.loggedin === true\">\n<app-account></app-account>\n</div>\n</div>\n"
 
 /***/ }),
 
@@ -1004,7 +1003,7 @@ module.exports = module.exports.toString();
 /***/ "./src/app/transfer/transfer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n<app-input></app-input>\n<!-- <log-in></log-in> -->\n<div>\n"
+module.exports = "<div>\n<app-input></app-input>\n<!-- <app-log-in></app-log-in> -->\n<div>\n"
 
 /***/ }),
 
@@ -1289,6 +1288,20 @@ module.exports = __webpack_require__("./src/main.ts");
 /***/ }),
 
 /***/ 25:
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 26:
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 27:
 /***/ (function(module, exports) {
 
 /* (ignored) */
